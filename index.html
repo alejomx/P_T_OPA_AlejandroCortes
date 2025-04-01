@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Mochila</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card p-4">
+            <h2 class="text-center mb-4">Optimización de Mochila</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="calMin" class="form-label">Mínimo de Calorías:</label>
+                    <input type="number" id="calMin" class="form-control" placeholder="Ej: 10">
+                </div>
+                <div class="col-md-6">
+                    <label for="pesoMax" class="form-label">Peso Máximo:</label>
+                    <input type="number" id="pesoMax" class="form-control" placeholder="Ej: 15">
+                </div>
+            </div>
+
+            <table class="table table-striped table-hover mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Peso</th>
+                        <th>Calorías</th>
+                    </tr>
+                </thead>
+                <tbody id="elementos">
+                    <tr><td>E1</td><td>3</td><td>3</td></tr>
+                    <tr><td>E2</td><td>3</td><td>5</td></tr>
+                    <tr><td>E3</td><td>5</td><td>2</td></tr>
+                    <tr><td>E4</td><td>1</td><td>8</td></tr>
+                    <tr><td>E5</td><td>2</td><td>3</td></tr>
+                </tbody>
+            </table>
+
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg shadow mt-3" onclick="optimizarMochila()">Calcular</button>
+            </div>
+
+            <h3 class="mt-4">Elementos Seleccionados:</h3>
+            <p id="resultado" class="fw-bold"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
